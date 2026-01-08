@@ -6,21 +6,24 @@
 }
 
 :root {
-    --primary-color: #f85496;
-    --secondary-color: #f85496;
-    --accent-color: #f85496;
-    --purple-color: #f85496;
-    --blue-color: #f85496;
-    --text-dark: #2C3E50;
+    --primary-color: #f4c720;
+    --secondary-color: #2044bc;
+    --accent-color: #bbe000;
+    --red-color: #ff3131;
+    --blue-color: #2044bc;
+    --yellow-color: #f4c720;
+    --green-color: #bbe000;
+    --brown-color: #a56b3d;
+    --text-dark: #000000;
     --text-light: #FFFFFF;
     --bg-light: #FAFAFA;
     --bg-white: #FFFFFF;
-    --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 4px 15px rgba(248, 84, 150, 0.15);
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 15px rgba(32, 68, 188, 0.2);
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', 'League Spartan', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -29,7 +32,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Gagalin', 'League Spartan', sans-serif;
     font-weight: 600;
 }
 
@@ -41,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header & Navigation */
 .header {
-    background: var(--bg-white);
+    background: var(--yellow-color);
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
@@ -64,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--red-color);
 }
 
 .robot-icon {
@@ -78,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-text {
-    color: var(--primary-color);
+    color: var(--red-color);
     font-weight: 700;
 }
 
@@ -90,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: #000000;
     font-weight: 500;
     transition: color 0.3s;
     position: relative;
@@ -103,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 0;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--red-color);
     transition: width 0.3s;
 }
 
@@ -112,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover {
-    color: var(--primary-color);
+    color: var(--red-color);
 }
 
 .menu-toggle {
@@ -134,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    background: var(--bg-white);
+    background: var(--blue-color);
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -145,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: rgba(248, 84, 150, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     top: -250px;
     right: -250px;
@@ -162,19 +165,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
     font-size: 3rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .highlight {
-    color: var(--primary-color);
+    color: var(--yellow-color);
     position: relative;
 }
 
 .hero-description {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-light);
     margin-bottom: 2rem;
 }
 
@@ -197,28 +200,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: var(--red-color);
     color: var(--text-light);
-    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 49, 49, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 8px 20px rgba(255, 49, 49, 0.4);
 }
 
 .btn-secondary {
-    background: var(--bg-white);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background: var(--yellow-color);
+    color: var(--text-dark);
+    border: 2px solid var(--yellow-color);
     box-shadow: none;
 }
 
 .btn-secondary:hover {
     transform: translateY(-3px);
-    background: var(--primary-color);
-    color: var(--text-light);
-    box-shadow: 0 8px 20px rgba(248, 84, 150, 0.3);
+    background: var(--text-light);
+    color: var(--text-dark);
+    box-shadow: 0 8px 20px rgba(244, 199, 32, 0.3);
 }
 
 .btn-full {
@@ -266,19 +269,19 @@ section {
 
 .section-header h2 {
     font-size: 2.8rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-light);
 }
 
 /* About Section */
 .about {
-    background: var(--bg-white);
+    background: var(--blue-color);
 }
 
 .about-content {
@@ -300,7 +303,7 @@ section {
 .about-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary-color);
+    border-color: var(--yellow-color);
 }
 
 .card-icon {
@@ -324,7 +327,7 @@ section {
 
 /* Curriculum Section */
 .curriculum {
-    background: var(--bg-light);
+    background: var(--blue-color);
     padding: 100px 0;
 }
 
@@ -344,21 +347,21 @@ section {
 }
 
 .curriculum-card.creative {
-    border-color: var(--primary-color);
+    border-color: var(--yellow-color);
 }
 
 .curriculum-card.builder {
-    border-color: var(--primary-color);
+    border-color: var(--green-color);
 }
 
 .curriculum-card.robotic {
-    border-color: var(--primary-color);
+    border-color: var(--red-color);
 }
 
 .curriculum-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary-color);
+    border-color: var(--yellow-color);
 }
 
 .card-header {
@@ -369,7 +372,7 @@ section {
 }
 
 .age-badge {
-    background: var(--primary-color);
+    background: var(--red-color);
     color: var(--text-light);
     padding: 10px 20px;
     border-radius: 50px;
@@ -414,7 +417,7 @@ section {
 
 /* Benefits Section */
 .benefits {
-    background: var(--bg-white);
+    background: var(--blue-color);
 }
 
 .benefits-grid {
@@ -454,7 +457,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background: var(--bg-light);
+    background: var(--blue-color);
 }
 
 .contact-content {
@@ -466,7 +469,7 @@ section {
 .contact-info h3 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     font-weight: 600;
 }
 
@@ -483,13 +486,13 @@ section {
 
 .info-item h4 {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     margin-bottom: 0.3rem;
     font-weight: 600;
 }
 
 .info-item p {
-    color: #666;
+    color: var(--text-light);
     font-size: 0.95rem;
 }
 
@@ -529,7 +532,7 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--yellow-color);
 }
 
 .form-group textarea {
@@ -538,8 +541,8 @@ section {
 
 /* Footer */
 .footer {
-    background: #f5f5f5;
-    color: var(--text-dark);
+    background: var(--green-color);
+    color: var(--text-light);
     padding: 2.5rem 0;
     text-align: center;
 }
@@ -560,11 +563,11 @@ section {
 }
 
 .footer .logo-text {
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .footer p {
-    color: #666;
+    color: var(--text-light);
     font-size: 0.9rem;
 }
 
@@ -576,7 +579,7 @@ section {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--bg-white);
+        background: var(--yellow-color);
         flex-direction: column;
         padding: 1rem;
         box-shadow: var(--shadow);

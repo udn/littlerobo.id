@@ -94,11 +94,11 @@ function showNotification(message, type = 'success') {
             }
             
             .notification-success {
-                border-left: 4px solid #4ECDC4;
+                border-left: 4px solid #bbe000;
             }
             
             .notification-error {
-                border-left: 4px solid #FF6B35;
+                border-left: 4px solid #ff3131;
             }
             
             .notification-content {
@@ -110,7 +110,7 @@ function showNotification(message, type = 'success') {
             .notification-icon {
                 font-size: 1.5rem;
                 font-weight: bold;
-                color: #4ECDC4;
+                color: #bbe000;
             }
             
             .notification-message {
@@ -205,6 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Console message for developers
 console.log('%c🤖 Littlerobo.id - Belajar Robotika dengan LEGO! 🧱', 
-    'color: #f85496; font-size: 20px; font-weight: bold; padding: 10px;');
+    'color: #2044bc; font-size: 20px; font-weight: bold; padding: 10px;');
 console.log('%cTertarik dengan website ini? Hubungi kami di info@littlerobo.id', 
-    'color: #f85496; font-size: 14px;');
+    'color: #f4c720; font-size: 14px;');
