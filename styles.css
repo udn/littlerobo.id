@@ -6,13 +6,10 @@
 }
 
 :root {
-    --primary-color: #f4c720;
-    --secondary-color: #2044bc;
-    --accent-color: #bbe000;
-    --red-color: #ff3131;
-    --blue-color: #2044bc;
     --yellow-color: #f4c720;
+    --blue-color: #2044bc;
     --green-color: #bbe000;
+    --red-color: #ff3131;
     --brown-color: #a56b3d;
     --text-dark: #000000;
     --text-light: #FFFFFF;
@@ -93,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a {
     text-decoration: none;
-    color: #000000;
+    color: var(--text-dark);
     font-weight: 500;
     transition: color 0.3s;
     position: relative;
