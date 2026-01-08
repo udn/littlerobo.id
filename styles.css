@@ -77,9 +77,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-text {
     background: linear-gradient(135deg, var(--primary-color), var(--purple-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .nav-menu {
@@ -685,9 +685,9 @@ section {
 
 .footer .logo-text {
     background: linear-gradient(135deg, var(--accent-color), var(--text-light));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 /* Responsive Design */

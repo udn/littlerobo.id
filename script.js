@@ -15,8 +15,10 @@ if (menuToggle && navMenu) {
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        menuToggle.classList.remove('active');
+        if (navMenu && menuToggle) {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
     });
 });
 
@@ -230,14 +232,7 @@ document.addEventListener('mousemove', (e) => {
     });
 });
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s';
-        document.body.style.opacity = '1';
-    }, 100);
-});
+// Add loading animation - handled by CSS
 
 // Console message for developers
 console.log('%c🤖 Littlerobo.id - Belajar Robotika dengan LEGO! 🧱', 
