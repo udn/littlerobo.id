@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: 'Inter', 'League Spartan', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -355,10 +355,22 @@ section {
     border-color: var(--red-color);
 }
 
-.curriculum-card:hover {
+.curriculum-card.creative:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
     border-color: var(--yellow-color);
+}
+
+.curriculum-card.builder:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--green-color);
+}
+
+.curriculum-card.robotic:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--red-color);
 }
 
 .card-header {
