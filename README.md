@@ -4,7 +4,7 @@ Landing page for Littlerobo.id - Institusi Pendidikan Robotika untuk Anak 4-12 T
 
 ## 🚀 Live Demo
 
-The site is automatically deployed to GitHub Pages: `https://udn.github.io/littlerobo.id/`
+The site is automatically deployed to GitHub Pages: `https://udn.github.io/littlerobo.id`
 
 ## 📋 Features
 
