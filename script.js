@@ -203,39 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
-
-// Interactive robot eyes follow cursor (fun feature)
-document.addEventListener('mousemove', (e) => {
-    const eyes = document.querySelectorAll('.eye');
-    
-    eyes.forEach(eye => {
-        const rect = eye.getBoundingClientRect();
-        const eyeX = rect.left + rect.width / 2;
-        const eyeY = rect.top + rect.height / 2;
-        
-        const angle = Math.atan2(e.clientY - eyeY, e.clientX - eyeX);
-        const distance = Math.min(5, Math.hypot(e.clientX - eyeX, e.clientY - eyeY) / 100);
-        
-        const pupilX = Math.cos(angle) * distance;
-        const pupilY = Math.sin(angle) * distance;
-        
-        eye.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
-    });
-});
-
-// Add loading animation - handled by CSS
-
 // Console message for developers
 console.log('%c🤖 Littlerobo.id - Belajar Robotika dengan LEGO! 🧱', 
-    'color: #FF6B35; font-size: 20px; font-weight: bold; padding: 10px;');
+    'color: #f85496; font-size: 20px; font-weight: bold; padding: 10px;');
 console.log('%cTertarik dengan website ini? Hubungi kami di info@littlerobo.id', 
-    'color: #4ECDC4; font-size: 14px;');
+    'color: #f85496; font-size: 14px;');

@@ -24,6 +24,8 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -223,178 +225,30 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-/* Floating Robot Animation */
-.floating-robot {
-    position: relative;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-.robot {
+/* Optimized Robot Placeholder */
+.robot-placeholder {
     width: 200px;
+    height: 300px;
     margin: 0 auto;
+    will-change: transform;
+    animation: gentleFloat 4s ease-in-out infinite;
 }
 
-.robot-head {
-    width: 120px;
-    height: 100px;
-    background: #ffc9e0;
-    border-radius: 20px;
-    position: relative;
-    margin: 0 auto 10px;
+@keyframes gentleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
-.antenna {
-    width: 4px;
-    height: 30px;
-    background: var(--text-dark);
+.lego-simple {
     position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.antenna::after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-}
-
-.eyes {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 30px;
-}
-
-.eye {
-    width: 20px;
-    height: 20px;
-    background: var(--text-dark);
-    border-radius: 50%;
-    animation: eyeBlink 3s infinite;
-}
-
-@keyframes eyeBlink {
-    0%, 90%, 100% { transform: scaleY(1); }
-    95% { transform: scaleY(0.1); }
-}
-
-.mouth {
-    width: 50px;
-    height: 5px;
-    background: var(--text-dark);
-    border-radius: 5px;
-    margin: 15px auto 0;
-}
-
-.robot-body {
-    width: 140px;
-    height: 120px;
-    background: var(--primary-color);
-    border-radius: 15px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.body-details {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.robot-arms {
-    position: absolute;
-    width: 100%;
-    top: 210px;
-}
-
-.arm {
-    width: 30px;
-    height: 80px;
-    background: #ffc9e0;
-    border-radius: 15px;
-    position: absolute;
-}
-}
-
-.arm.left {
-    left: 10px;
-    transform: rotate(-20deg);
-}
-
-.arm.right {
-    right: 10px;
-    transform: rotate(20deg);
-}
-
-.robot-legs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.leg {
-    width: 35px;
-    height: 60px;
-    background: #ff89b5;
-    border-radius: 10px;
-}
-
-.lego-blocks {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-}
-
-.lego-block {
-    position: absolute;
+    bottom: 20%;
+    right: 10%;
     font-size: 3rem;
-    animation: rotate 4s linear infinite;
+    opacity: 0.6;
+    animation: subtleRotate 8s linear infinite;
 }
 
-.block-1 {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.block-2 {
-    top: 60%;
-    left: 80%;
-    animation-delay: 1s;
-}
-
-.block-3 {
-    top: 80%;
-    left: 20%;
-    animation-delay: 2s;
-}
-
-@keyframes rotate {
+@keyframes subtleRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
@@ -402,6 +256,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Section Styles */
 section {
     padding: 80px 0;
+    contain: layout style;
 }
 
 .section-header {
