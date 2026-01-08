@@ -670,6 +670,13 @@ section {
     transition: border-color 0.3s;
 }
 
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
 .form-group textarea {
     resize: vertical;
 }
