@@ -206,5 +206,5 @@ document.addEventListener('DOMContentLoaded', () => {
 // Console message for developers
 console.log('%c🤖 Littlerobo.id - Belajar Robotika dengan LEGO! 🧱', 
     'color: #2044bc; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%cTertarik dengan website ini? Hubungi kami di info@littlerobo.id', 
+console.log('%cTertarik dengan website ini? Hubungi kami di wa +62 852-2955-2707', 
     'color: #f4c720; font-size: 14px;');
