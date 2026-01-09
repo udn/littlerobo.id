@@ -51,14 +51,23 @@ if (contactForm) {
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData.entries());
         
-        // Show success message
-        showNotification('Terima kasih! Pendaftaran Anda telah kami terima. Kami akan menghubungi Anda segera.', 'success');
+        // Build WhatsApp message
+        const message = `Nama anak: ${data['child-name']}
+Usia: ${data['age']}
+No Telp: ${data['phone']}
+Pesan: ${data['message'] || '-'}`;
+        
+        // WhatsApp number (without + and spaces)
+        const whatsappNumber = '6285229552707';
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, '_blank');
         
         // Reset form
         contactForm.reset();
-        
-        // Log data (in production, this would be sent to a server)
-        console.log('Form Data:', data);
     });
 }
 
