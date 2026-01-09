@@ -30,7 +30,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Gagalin', 'League Spartan', sans-serif;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .container {
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 10px;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 100;
     color: var(--red-color);
 }
 
@@ -78,8 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-text {
-    color: var(--red-color);
-    font-weight: 700;
+    color: var(--blue-color);
+    font-weight: 100;
 }
 
 .nav-menu {
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--blue-color);
     font-weight: 500;
     transition: color 0.3s;
     position: relative;
@@ -197,28 +197,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: var(--red-color);
-    color: var(--text-light);
-    box-shadow: 0 5px 15px rgba(255, 49, 49, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 49, 49, 0.4);
-}
-
-.btn-secondary {
     background: var(--yellow-color);
     color: var(--text-dark);
     border: 2px solid var(--yellow-color);
     box-shadow: none;
 }
 
-.btn-secondary:hover {
+.btn-primary:hover {
     transform: translateY(-3px);
     background: var(--text-light);
     color: var(--text-dark);
     box-shadow: 0 8px 20px rgba(244, 199, 32, 0.3);
+}
+
+.btn-secondary {
+    background: var(--green-color);
+    color: var(--text-dark);
+    box-shadow: 0 5px 15px rgba(70, 219, 25, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(151, 238, 140, 0.3);
 }
 
 .btn-full {
@@ -268,7 +268,7 @@ section {
     font-size: 2.8rem;
     color: var(--text-light);
     margin-bottom: 0.5rem;
-    font-weight: 700;
+    font-weight: 100;
 }
 
 .section-subtitle {
@@ -312,7 +312,7 @@ section {
     font-size: 1.4rem;
     color: var(--text-dark);
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .about-card p {
@@ -386,7 +386,7 @@ section {
     padding: 10px 20px;
     border-radius: 50px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 100;
     letter-spacing: 0.5px;
 }
 
@@ -398,7 +398,7 @@ section {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--text-dark);
-    font-weight: 700;
+    font-weight: 100;
 }
 
 .card-description {
@@ -456,7 +456,7 @@ section {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .benefit-item p {
@@ -479,7 +479,7 @@ section {
     font-size: 1.8rem;
     margin-bottom: 2rem;
     color: var(--text-light);
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .info-item {
@@ -497,7 +497,7 @@ section {
     font-size: 1.1rem;
     color: var(--text-light);
     margin-bottom: 0.3rem;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .info-item p {
@@ -521,7 +521,7 @@ section {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
-    font-weight: 500;
+    font-weight: 100;
     font-size: 0.95rem;
 }
 
@@ -568,15 +568,15 @@ section {
     align-items: center;
     gap: 10px;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 100;
 }
 
 .footer .logo-text {
-    color: var(--text-light);
+    color: var(--blue-color);
 }
 
 .footer p {
-    color: var(--text-light);
+    color: var(--blue-color);
     font-size: 0.9rem;
 }
 
