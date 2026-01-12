@@ -26,6 +26,30 @@ navLinks.forEach(link => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        
+        // Track "Lihat Program" button click
+        const buttonText = this.textContent.trim();
+        if (buttonText === 'Lihat Program') {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click_lihat_program', {
+                    'event_category': 'engagement',
+                    'event_label': 'Hero Section - Lihat Program',
+                    'value': 1
+                });
+            }
+        }
+        
+        // Track "Daftar Sekarang" button click
+        if (buttonText === 'Daftar Sekarang') {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click_daftar_sekarang', {
+                    'event_category': 'engagement',
+                    'event_label': 'Hero Section - Daftar Sekarang',
+                    'value': 1
+                });
+            }
+        }
+        
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             const headerOffset = 80;
@@ -50,6 +74,24 @@ if (contactForm) {
         // Get form data
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData.entries());
+        
+        // Track form submission as a Goal
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'send_to': 'G-Z1S376MG20',
+                'event_category': 'form_submission',
+                'event_label': 'Kirim Pendaftaran',
+                'value': 1
+            });
+            
+            // Also send as a custom event for easier tracking
+            gtag('event', 'submit_registration', {
+                'event_category': 'form_submission',
+                'event_label': 'Kirim Pendaftaran',
+                'program': data['age'],
+                'value': 1
+            });
+        }
         
         // Build WhatsApp message
         const message = `Nama anak: ${data['child-name']}
